@@ -26,10 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname' => getenv('DB_HOST') ?: 'db',
-        'username' => getenv('DB_USERNAME') ?: 'root',
-        'password' => getenv('DB_PASSWORD') ?: 'root',
-        'database' => getenv('DB_DATABASE') ?: 'ci4_db',
+        'hostname'     => getenv('DB_HOST') ?: 'db',
+        'username'     => getenv('DB_USERNAME') ?: 'root',
+        'password'     => getenv('DB_PASSWORD') ?: 'root',
+        'database'     => getenv('DB_DATABASE') ?: 'ci4_db',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,

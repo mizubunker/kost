@@ -9,6 +9,8 @@ $routes->get('/', 'Home::index');
 
 $routes->group('api', ['namespace' => 'App\Controllers\Api'], function($routes) {
     // GET
+
+    $routes()->get('vote', 'VoteController::index');
     
     // terbaik() - semua terbaik dari SAW
     // terbaik(harga) - filter Harga
