@@ -10,7 +10,7 @@ $routes->get('/', 'Home::index');
 $routes->group('api', ['namespace' => 'App\Controllers\Api'], function($routes) {
     // GET
 
-    $routes()->get('vote', 'VoteController::index');
+    $routes->get('vote', 'VoteController::index');
     
     // terbaik() - semua terbaik dari SAW
     // terbaik(harga) - filter Harga
@@ -22,9 +22,9 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], function($routes) 
     
     // POST
 
-    $routes()->post('register', 'AuthController::register');
-    $routes()->post('login', 'AuthController::login');
-    $routes()->post('vote', 'VoteController::create');
+    $routes->post('register', 'AuthController::register');
+    $routes->post('login', 'AuthController::login');
+    $routes->post('vote', 'VoteController::create');
     
     // vote(idKost) - tambah vote
     // comment(message) - komentar soal kost
