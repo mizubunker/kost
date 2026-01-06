@@ -11,14 +11,9 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], function($routes) 
     // GET
 
     $routes->get('vote', 'VoteController::index');
-    
-    // terbaik() - semua terbaik dari SAW
-    // terbaik(harga) - filter Harga
-    // terbaik(jarak) - filter Jarak
-    // terbaik(fasilitas) - filter Fasilitas
-    // terbaik(keamanan) - filter Keamanan
-    // vote(idKost) - ambil jumlah vote
-    // detail(idKost) - ambil data kost-an
+    $routes->get('detail', 'KostController::index');
+    $routes->get('terbaik', 'KostController::saw');
+    $routes->get('terbaik/(:segment)', 'KostController::saw/$1');
     
     // POST
 
